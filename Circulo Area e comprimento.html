@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        body{
+            background-color: black;
+        }
+        hgroup{
+            color: antiquewhite;
+        }
+        hgroup#RES{
+            color: antiquewhite;
+            position: absolute;
+            top: 187px;
+        }
+        div#resArea{
+            position: absolute;
+            left: 60px;
+            top: 22px;
+        }
+        div#resComp{
+            position: absolute;
+            left: 135px;
+            top: 62px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <hgroup>
+        <h1>Descubra a Área e o Comprimento de um Circulo</h1>
+        <h2> Digite o Raio do circulo </h2>
+    </hgroup>
+        <input type="text" id="raio">
+        <button onclick="res()"> Resultado </button>
+    </div>
+    </body>
+    <div id="res"> Resultado 
+        <hgroup id="RES">
+        <h3>Área:</h3> <div id="resArea"> = </div>
+        <h3>Comprimento: </h3> <div id="resComp"> = </div> 
+        </hgroup>
+    </div>
+    <script>
+        let raio = 0;
+        let comprimento = 0;
+        let area = 0;
+        function res(){
+            var raio = document.getElementById('raio').value;
+            parseFloat(raio);
+            comprimento = 2 * Math.PI * raio;
+            area = Math.PI * raio * raio;
+
+            document.getElementById('resArea').innerHTML = area;
+            document.getElementById('resComp').innerHTML = comprimento;
+        }
+
+    </script>
+</body>
+</html>
